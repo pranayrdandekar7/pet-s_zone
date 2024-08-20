@@ -14,10 +14,6 @@ const doctorsSchema = new Schema({
     type: String,
     required: true
   },
-  hospital: {
-    type: String,
-    required: true
-  },
   specialization: {
     type: String,
     required: true
