@@ -83,7 +83,7 @@ const updateDoctor = async (req, res) => {
   })
 }
 
-const deldoctors = async (req, res) => {
+const deletedoctors = async (req, res) => {
   const { name } = req.body
   const { doctId } = req.query
   await Doctor.deleteOne({ _id: doctId })
@@ -94,5 +94,5 @@ const deldoctors = async (req, res) => {
   })
 }
 export {
-  postDoctors, getDoctors, getDoctorsbyid, updateDoctor, deldoctors
+  postDoctors, getDoctors, getDoctorsbyid, updateDoctor, deletedoctors
 }
