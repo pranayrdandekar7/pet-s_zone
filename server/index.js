@@ -5,6 +5,9 @@ import dotenv from "dotenv"
 import getHealth from "./controllers/helth.js";
 import { postDoctors, getDoctors ,getDoctorsbyid,updateDoctor,deldoctors} from './controllers/petDocter.js'
 
+import {postSignupUser,postLogInUser} from "./controllers/user.js"
+
+
 dotenv.config();
 const app = express()
 app.use(express.json())
@@ -18,14 +21,14 @@ const dbConnection = async () => {
 }
 dbConnection();
 
-app.get("/health", getHealth)
+app.get("/health" , getHealth)
+
+app.post("/signup",postSignupUser)
+app.post("/login",postLogInUser)
 
 //APIs for Doctors
-app.get("/v1/doctors", getDoctors)
-app.get("/v1/doctors", getDoctorsbyid)
-app.post("/v1/doctors", postDoctors)
-app.put("/v1/doctors/:id",updateDoctor)
-app.delete("/v1/doctors",deldoctors)
+app.get("/v1/doctors" , getDoctors)
+app.post("/v1/doctors",postDoctors)
 
 
 const PORT = process.env.PORT || 5000
