@@ -93,6 +93,7 @@ const deletedoctors = async (req, res) => {
     data:null
   })
 }
+
 export {
   postDoctors, getDoctors, getDoctorsbyid, updateDoctor, deletedoctors
 }
