@@ -3,7 +3,11 @@ import cors from "cors"
 import mongoose from "mongoose";
 import dotenv from "dotenv"
 import getHealth from "./controllers/helth.js";
+
+import {postSignupUser,postLogInUser} from "./controllers/user.js"
+
 import {postDoctors,getDoctors} from './controllers/petDocter.js'
+
 
 dotenv.config();
 const app = express()
@@ -19,9 +23,14 @@ const dbConnection = async ()=>{
 dbConnection();
 
 app.get("/health" , getHealth)
+
+app.post("/signup",postSignupUser)
+app.post("/login",postLogInUser)
+
 //APIs for Doctors
 app.get("/v1/doctors" , getDoctors)
 app.post("/v1/doctors",postDoctors)
+
 
 const PORT = process.env.PORT || 5000
 
