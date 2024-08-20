@@ -5,6 +5,7 @@ import dotenv from "dotenv"
 import getHealth from "./controllers/helth.js";
 import { postDoctors, getDoctors ,getDoctorsbyid,updateDoctor,deletedoctors} from './controllers/petDocter.js'
 
+import {postPet,deletePet} from "./controllers/pets.js"
 import {postSignupUser,postLogInUser} from "./controllers/user.js"
 
 
@@ -21,6 +22,10 @@ const dbConnection = async () => {
 dbConnection();
 
 app.get("/health" , getHealth)
+//API'S for pets
+
+app.post("/pet",postPet)
+app.delete("/pet/:id",deletePet)
 
 app.post("/signup",postSignupUser)
 app.post("/login",postLogInUser)
