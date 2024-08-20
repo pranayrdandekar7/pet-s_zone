@@ -3,6 +3,7 @@ import cors from "cors"
 import mongoose from "mongoose";
 import dotenv from "dotenv"
 import getHealth from "./controllers/helth.js";
+import {postPet} from "./controllers/pets.js"
 import { postDoctors, getDoctors ,getDoctorsbyid,updateDoctor,deldoctors} from './controllers/petDocter.js'
 
 import {postSignupUser,postLogInUser} from "./controllers/user.js"
@@ -22,6 +23,9 @@ const dbConnection = async () => {
 dbConnection();
 
 app.get("/health" , getHealth)
+//API'S for pets
+
+app.post("/pet",postPet)
 
 app.post("/signup",postSignupUser)
 app.post("/login",postLogInUser)

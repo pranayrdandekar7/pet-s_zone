@@ -1,7 +1,7 @@
 import {model,Schema} from 'mongoose';
 
 const petsSchema = new Schema({
-  name:{
+  petName:{
     type:String,
     required: true
   },
