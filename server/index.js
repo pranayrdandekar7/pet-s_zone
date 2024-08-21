@@ -3,9 +3,9 @@ import cors from "cors"
 import mongoose from "mongoose";
 import dotenv from "dotenv"
 import getHealth from "./controllers/helth.js";
-import {postPet,deletePet} from "./controllers/pets.js"
-import { postDoctors, getDoctors ,getDoctorsbyid,updateDoctor,deldoctors} from './controllers/petDocter.js'
+import { postDoctors, getDoctors ,getDoctorsbyid,updateDoctor,deletedoctors} from './controllers/petDocter.js'
 
+import {postPet,deletePet} from "./controllers/pets.js"
 import {postSignupUser,postLogInUser} from "./controllers/user.js"
 
 
@@ -13,7 +13,6 @@ dotenv.config();
 const app = express()
 app.use(express.json())
 app.use(cors())
-
 const dbConnection = async () => {
     const conn = await mongoose.connect(process.env.MONGO_URL);
     if (conn) {
@@ -34,6 +33,9 @@ app.post("/login",postLogInUser)
 //APIs for Doctors
 app.get("/v1/doctors" , getDoctors)
 app.post("/v1/doctors",postDoctors)
+app.post("/v1/doctors", postDoctors)
+app.put("/v1/doctors/:id",updateDoctor)
+app.delete("/v1/doctors",deletedoctors)
 
 
 const PORT = process.env.PORT || 5000
