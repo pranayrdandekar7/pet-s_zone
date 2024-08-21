@@ -1,17 +1,31 @@
 import React from 'react'
+import './Footer.css'
 
 function Footer() {
     return (
-        <div class="card text-center">
-            <div class="card-header">
-                Featured
+        <div className="card text-center">
+            <div className="card-header footer-title">
+                Pets Zone
             </div>
-            <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div className="card-body">
+                <h5 className="card-title"></h5>
+                <div className='footer-content'>
+                    <div className='links'>
+                        <p className="card-text">Special Links</p>
+                        <a href="/" className="">Home</a><br />
+                        <a href="/Blogs" className="">Blogs</a><br />
+                        <a href="/Contact" className="">Contact</a><br />
+                        <a href="/Login" className="">Login</a>
+                    </div>
+                    <div className='contact'>
+                        <p>Contact</p>
+                        <a className="">saritasadgir3@gmail.com</a><br />
+                        <p className="">Mobile<a>9665386035</a></p><br />
+
+                    </div>
+                </div>
             </div>
-            <div class="card-footer text-body-secondary">
+            <div className="card-footer text-body-secondary">
                 2 days ago
             </div>
         </div>
