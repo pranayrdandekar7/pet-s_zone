@@ -39,7 +39,7 @@ function SignUp() {
         }
         console.log(response)
     }
-    
+
     return (
         <div>
             <div className='bodyContainer'>
@@ -87,7 +87,7 @@ function SignUp() {
                     </div>
 
                     <button type="button"
-                        
+                        onClick={signUp}
                         className="signUp-btn">SignUp
                     </button>
                 </form>
