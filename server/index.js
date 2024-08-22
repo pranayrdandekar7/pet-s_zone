@@ -12,7 +12,7 @@ import { postDoctors, getDoctors ,getDoctorsbyid,updateDoctor,deletedoctors} fro
 
 
 import {postSignupUser,postLogInUser} from "./controllers/user.js"
-import { PostBlog,deleteBlogId } from "./controllers/blog.js";
+import { PostBlog,deleteBlogId ,} from "./controllers/blog.js";
 
 
 dotenv.config();
@@ -48,6 +48,7 @@ app.delete("/v1/doctors",deletedoctors)
 //api blogs
 app.post("/blog",PostBlog)
 app.delete("/blog/:id",deleteBlogId)
+
 
 const PORT = process.env.PORT || 5000
 
