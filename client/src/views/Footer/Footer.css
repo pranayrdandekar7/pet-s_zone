@@ -7,3 +7,8 @@
 .footer-title{
     font-size: 25px;
 }
+.CardBody{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}

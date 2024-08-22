@@ -7,20 +7,20 @@ function Footer() {
             <div className="card-header footer-title">
                 Pets Zone
             </div>
-            <div className="card-body">
+            <div className="card-body ">
                 <h5 className="card-title"></h5>
-                <div className='footer-content'>
+                <div className='footer-content '>
                     <div className='links'>
                         <p className="card-text">Special Links</p>
-                        <a href="/" className="">Home</a><br />
-                        <a href="/Blogs" className="">Blogs</a><br />
-                        <a href="/Contact" className="">Contact</a><br />
-                        <a href="/Login" className="">Login</a>
+                        <a href="/" className="CardBody">Home</a><br />
+                        <a href="/Blogs" className="CardBody">Blogs</a><br />
+                        <a href="/Contact" className="CardBody">Contact</a><br />
+                        <a href="/Login" className="CardBody">Login</a>
                     </div>
                     <div className='contact'>
                         <p>Contact</p>
-                        <a className="">saritasadgir3@gmail.com</a><br />
-                        <p className="">Mobile<a>9665386035</a></p><br />
+                        <a className="CardBody ">saritasadgir3@gmail.com</a><br />
+                        <p className="CardBody">Mobile<a>9665386035</a></p><br />
 
                     </div>
                 </div>

@@ -15,6 +15,7 @@ function Home() {
 
   return (
     <div>
+      
       <div className='d-flex gap-5 flex-wrap'>
         <Show_Cards />
         <Link to="">  <Animal_cards Img={cow} /> </Link>
