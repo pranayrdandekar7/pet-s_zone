@@ -7,11 +7,13 @@ import bull from '../../components/animal_show_cards/bull.jpeg'
 import { Link } from 'react-router-dom'
 import dog from '../../components/animal_show_cards/dog.jpeg'
 import cat from '../../components/animal_show_cards/cat.jpg'
+import SignUp from '../SignUp/SignUp'
 
 
 function Home() {
   return (
     <div className='d-flex gap-5 flex-wrap'>
+      <SignUp/>
       <Show_Cards />
       <Link to="">  <Animal_cards Img={cow} /> </Link>
       <Link to="">  <Animal_cards Img={bull}/></Link>
