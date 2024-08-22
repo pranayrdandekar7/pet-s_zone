@@ -9,7 +9,7 @@ import {postPet,deletePet,putPets,getPets} from "./controllers/pets.js"
 import { postDoctors, getDoctors ,getDoctorsbyid,updateDoctor,deletedoctors} from './controllers/petDocter.js'
 
 import {postSignupUser,postLogInUser} from "./controllers/user.js"
-import { PostBlog,deleteBlogId ,} from "./controllers/blog.js";
+import { PostBlog,deleteBlogId ,getallBlogs,getBlog} from "./controllers/blog.js";
 
 
 dotenv.config();
@@ -45,6 +45,8 @@ app.put("/v1/doctors/:id",updateDoctor)
 app.delete("/v1/doctors",deletedoctors)
 //api blogs
 app.post("/blog",PostBlog)
+app.get("/blogs/:id",getBlog)
+app.get("/blogs",getallBlogs)
 app.delete("/blog/:id",deleteBlogId)
 
 
