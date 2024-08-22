@@ -15,7 +15,7 @@ function SignUp() {
         role: ''
     })
     const signUp = async () => {
-        const response = await axios.post(`${process.env.REACT_APP_API_URL}/signUp`, {
+        const response = await axios.post(`${process.env.REACT_APP_API_URL}/signup`, {
             fullName: user.fullName,
             email: user.email,
             password: user.password,
