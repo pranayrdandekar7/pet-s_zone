@@ -1,6 +1,45 @@
-import React from 'react'
+import React, { useState } from 'react'
+import './SignUp.css'
+import axios from 'axios'
+import toast, { Toaster } from 'react-hot-toast'
+
+
 
 function SignUp() {
+
+    const [user, setUser] = useState({
+        name: '',
+        mobile: '',
+        email: '',
+        password: '',
+        role: ''
+    })
+    const signUp = async () => {
+        const response = await axios.post(`${process.env.REACT_APP_API_URL}/signUp`, {
+            fullName: user.fullName,
+            email: user.email,
+            password: user.password,
+            proffession: user.proffession
+        })
+    
+        console.log(response);
+    
+    
+        if (response.data.success) {
+            toast.success(response.data.message)
+            setUser({
+                fullName: '',
+                email: '',
+                password: '',
+                proffession: ''
+            })
+        }
+        else {
+            toast.error(response.data.message)
+        }
+        console.log(response)
+    }
+    
     return (
         <div>
             <div className='bodyContainer'>
@@ -47,8 +86,12 @@ function SignUp() {
                         />
                     </div>
 
-                    
+                    <button type="button"
+                        
+                        className="signUp-btn">SignUp
+                    </button>
                 </form>
+                <Toaster/>
 
             </div>
         </div>
