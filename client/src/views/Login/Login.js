@@ -57,7 +57,7 @@ function Login() {
                         onClick={loginNow}
                     >Login</button>
 
-                    <Link to='/signUp' className=" alreadyAcc">Already Have an account ? <span className='login-text' > SignUp</span></Link>
+                    <Link to='/signup' className=" alreadyAcc">Already Have an account ? <span className='login-text' > SignUp</span></Link>
                 </form>
                 <Toaster />
 
