@@ -23,7 +23,7 @@ function Blog() {
             return(
                 <BlogsCard   
                        
-                key={i}
+              key={i}
                 id={_id}
                 title={title}
                 description={description}
