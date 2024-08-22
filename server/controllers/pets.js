@@ -8,7 +8,9 @@ const postPet = async (req, res) => {
         breed,
         description,
         image,
-        price } = req.body
+        price,
+        user
+    } = req.body
 
 
     const newPet = new Pets({
@@ -19,6 +21,7 @@ const postPet = async (req, res) => {
         description,
         image,
         price,
+        user
 
     });
 
@@ -47,9 +50,30 @@ const putPets = async (req, res) => {
         breed,
         description,
         image,
-        price } = req.body
+        price,
+        user } = req.body
+
+
+    if (!user) {
+        return res.status(400).json({
+            success: false,
+            message: 'User information is required .'
+        });
+    }
 
     const { id } = req.params;
+    const pet = await Pets.findById(id);
+    if (!pet) {
+        return res.status(404).json({
+            success: false,
+            message: 'Pet not found.'
+        });
+    }
+
+    console.log("this is pet", pet.user.valueOf())
+
+   
+
     await Pets.updateOne({ _id: id },
         {
             $set: {
@@ -59,7 +83,8 @@ const putPets = async (req, res) => {
                 breed,
                 description,
                 image,
-                price
+                price,
+                user
 
             }
         }
@@ -69,7 +94,7 @@ const putPets = async (req, res) => {
     res.json({
         success: true,
         message: `pet update successfully`,
-        data: updatepet
+         data: updatepet
     })
 
 }
@@ -87,8 +112,19 @@ const deletePet = async (req, res) => {
     })
 }
 
+const getPets = async (req,res)=>{
+    const allPets =await Pets.find()
+
+    res.json({
+        success:true,
+        message:`all pets fetched successfully`,
+        data:allPets
+    })
+}
+
 export {
     postPet,
     deletePet,
-    putPets
+    putPets,
+    getPets
 }

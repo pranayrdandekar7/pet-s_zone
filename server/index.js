@@ -4,12 +4,9 @@ import mongoose from "mongoose";
 import dotenv from "dotenv"
 import getHealth from "./controllers/helth.js";
 
-import {postPet,deletePet,putPets} from "./controllers/pets.js"
-
+import {postPet,deletePet,putPets,getPets} from "./controllers/pets.js"
 
 import { postDoctors, getDoctors ,getDoctorsbyid,updateDoctor,deletedoctors} from './controllers/petDocter.js'
-
-
 
 import {postSignupUser,postLogInUser} from "./controllers/user.js"
 
@@ -30,7 +27,8 @@ app.get("/health" , getHealth)
 //API'S for pets
 
 app.post("/pet",postPet)
-app.put("/:petName/:id",putPets)
+app.put("/pet/:id",putPets)
+app.get("/pets",getPets)
 app.delete("/pet/:id",deletePet)
 
 app.post("/signup",postSignupUser)
