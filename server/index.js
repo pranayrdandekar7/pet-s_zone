@@ -12,12 +12,15 @@ import { postDoctors, getDoctors ,getDoctorsbyid,updateDoctor,deletedoctors} fro
 
 
 import {postSignupUser,postLogInUser} from "./controllers/user.js"
+import { PostBlog,deleteBlogId } from "./controllers/blog.js";
 
 
 dotenv.config();
 const app = express()
 app.use(express.json())
 app.use(cors())
+
+
 const dbConnection = async () => {
     const conn = await mongoose.connect(process.env.MONGO_URL);
     if (conn) {
@@ -42,7 +45,9 @@ app.post("/v1/doctors",postDoctors)
 app.post("/v1/doctors", postDoctors)
 app.put("/v1/doctors/:id",updateDoctor)
 app.delete("/v1/doctors",deletedoctors)
-
+//api blogs
+app.post("/blog",PostBlog)
+app.delete("/blog/:id",deleteBlogId)
 
 const PORT = process.env.PORT || 5000
 
