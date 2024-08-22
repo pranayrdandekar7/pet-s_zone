@@ -11,8 +11,6 @@ import SignUp from './views/SignUp/SignUp';
 import Login from './views/Login/Login';
 import PetSellForm from './views/PetSellform/PetSellForm';
 
-
-
 const router= createBrowserRouter ([
   {
     path:"/",

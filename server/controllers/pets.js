@@ -62,19 +62,18 @@ const putPets = async (req, res) => {
     }
 
     const { id } = req.params;
-    const pet = await Pets.findById(id);
+  
+    const pet = await Pets.findOne({_id: id, user: user})
     if (!pet) {
         return res.status(404).json({
             success: false,
-            message: 'Pet not found.'
+            message: 'Pet details mismatch'
         });
     }
 
     console.log("this is pet", pet.user.valueOf())
 
-   
-
-    await Pets.updateOne({ _id: id },
+    await Pets.updateOne({ _id: id, user: pet.user.valueOf()},
         {
             $set: {
                 petName,
@@ -83,8 +82,7 @@ const putPets = async (req, res) => {
                 breed,
                 description,
                 image,
-                price,
-                user
+                price
 
             }
         }
