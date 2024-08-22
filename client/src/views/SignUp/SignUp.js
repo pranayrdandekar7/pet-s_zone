@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './SignUp.css'
 import axios from 'axios'
 import toast, { Toaster } from 'react-hot-toast'
+import { Link } from 'react-router-dom'
 
 
 
@@ -15,7 +16,7 @@ function SignUp() {
         role: ''
     })
     const signUp = async () => {
-        const response = await axios.post(`${process.env.REACT_APP_API_URL}/signUp`, {
+        const response = await axios.post(`${process.env.REACT_APP_API_URL}/signup`, {
             fullName: user.fullName,
             email: user.email,
             password: user.password,
@@ -90,8 +91,11 @@ function SignUp() {
                         onClick={signUp}
                         className="signUp-btn">SignUp
                     </button>
+
+                    <Link to='/login' className=" alreadyAcc">Already Have an account ? <span className='login-text' > Login</span></Link>
+                    <Toaster/>
                 </form>
-                <Toaster/>
+                
 
             </div>
         </div>

@@ -3,7 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import {createBrowserRouter,RouterProvider} from "react-router-dom"
 import Home from './views/Home/Home';
-import Blog from '../src/views/Blog/Blog';
+
+
+
+
+import Blog from './views/Blogs/Blog'
+import SignUp from './views/SignUp/SignUp';
+import Login from './views/Login/Login';
 
 
 
@@ -15,6 +21,14 @@ const router= createBrowserRouter ([
   {
     path:"/blog",
     element:<Blog/>
+  },
+  {
+    path: '/signup',
+    element : <SignUp/>
+  },
+  {
+    path:'/login',
+    element: <Login/>
   },
   {
     path:"*",
