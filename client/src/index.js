@@ -5,7 +5,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {createBrowserRouter,RouterProvider} from "react-router-dom"
 import Home from './views/Home/Home';
+
+
+import PetDatails from "./views/PetDatails/PetDatails"
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Blog from "./views/Blog/Blog"
+
 
 
 import SignUp from './views/SignUp/SignUp';
@@ -22,12 +28,16 @@ const router= createBrowserRouter ([
     element:<Blog/>
   },
   {
+
+    path:"/petdetails",
+    element:<PetDatails/>
     path: '/signup',
     element : <SignUp/>
   },
   {
     path:'/login',
     element: <Login/>
+
   },
   {
     path:"*",
