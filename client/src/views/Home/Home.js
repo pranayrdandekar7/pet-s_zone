@@ -7,14 +7,14 @@ import { Link } from 'react-router-dom'
 import dog from '../../components/animal_show_cards/dog.jpeg'
 import cat from '../../components/animal_show_cards/cat.jpg'
 import Footer from '../Footer/Footer'
-
+import Navbar from '../Navbar/Navbar'
 
 
 function Home() {
 
   return (
     <div>
-      
+        <Navbar/>
       <div className='d-flex gap-5 flex-wrap'>
         <Show_Cards />
         <Link to="">  <Animal_cards Img={cow} /> </Link>

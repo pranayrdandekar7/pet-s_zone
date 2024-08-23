@@ -1,9 +1,9 @@
-import Blogs from "../models/Blogs.js";
+import Blog from "../models/Blogs.js";
 
 const PostBlog = async(req,res)=>{
     const { title,description,category,vidUrl,date}=req.body
 
-    const blog =new Blogs({
+    const blog =new Blog({
         title,
         description,
         category,
@@ -47,6 +47,44 @@ const deleteBlogId= async(req,res)=>{
     })
  }
 }
+const getallBlogs=async(req,res)=>{
+    const blogs = await Blog.find()
+    if(blogs){
+        res.json({
+            success:true,
+            message:" all blogs fetched successfully",
+            data:blogs
+        })
+    }
+    else{
+        res.json({
+            success:false,
+            message:"blogs not found",
+            data:null
+        })
+    }
+ 
+}
 
-export {PostBlog, deleteBlogId}
+const getBlog=async(req,res)=>{
+    const {id}= req.params;
+const blogs = await Blog.findById({_id:id})
+       if(blogs){
+     res.json({
+            success:true,
+            message:"blogs fetched successfully",
+            data:blogs
+        })
+       }
+       else{
+        res.json({
+            success:false,
+            message:"blogs not found",
+            data:null
+        })
+       }
+       
+    }
+
+export {PostBlog, deleteBlogId,getallBlogs,getBlog}
  
