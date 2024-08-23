@@ -43,9 +43,9 @@ function Footer() {
 
                     <div >
                         <p className='heading'>Contacts</p>
-                        <a className="CardBody "><img src={HomeImg} className='contact-logo' /> <span>At.post Shewalewadi,Pune</span></a>
-                        <a className="CardBody "><img src={Email} className='contact-logo' /> <span>petzone9766@gmail.com</span></a>
-                        <a className="CardBody"><img src={Contact} className=' contact-logo contact-mobile' /> <span>9665386034</span></a>
+                        <a href='https://maps.app.goo.gl/drAqrsMTP9cZHt8F8' className="CardBody "><img src={HomeImg} className='contact-logo' /> <span>At.post Shewalewadi,Pune</span></a>
+                        <a  href='mailto: petzone9766@gmail.com' className="CardBody "><img src={Email} className='contact-logo' /> <span >petzone9766@gmail.com</span></a>
+                        <a href='tel: 9665386034' className="CardBody"><img src={Contact} className=' contact-logo contact-mobile' /> <span>9665386034</span></a>
                     </div>
                     <div >
                         <p className='heading'>Social Links</p>
