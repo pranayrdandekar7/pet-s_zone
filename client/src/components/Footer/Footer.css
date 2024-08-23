@@ -20,6 +20,19 @@
     font-weight: bold;
     font-size: 18px;
 }
+.logoInfo{
+    display: flex;
+    flex-direction: row;
+    padding-left: 100px;
+}
+
+.website-info{
+    width: 200px;
+}
+.info{
+    width: 300px;
+    margin-top: 18px;
+}
 .CardBody{
     display: flex;
     text-decoration: none;
@@ -28,6 +41,9 @@
     color: white;
     margin-top: 10px;
     font-size: 16px;
+}
+.content-center{
+    justify-content: center;
 }
 .contact-logo{
     height: 23px;
