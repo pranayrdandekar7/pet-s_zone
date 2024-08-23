@@ -3,14 +3,15 @@ import cors from "cors"
 import mongoose from "mongoose";
 import dotenv from "dotenv"
 import getHealth from "./controllers/helth.js";
+import { postDoctors, getDoctors ,getDoctorsbyid,updateDoctor,deldoctors} from './controllers/petDocter.js';
+//petFoods
+import{postpetFoods, getPetFoods,getPetFoodsId,putPetFoodsId, deletePetFoods} from './controllers/petFoods.js'
 
 import {postPet,deletePet,putPets,getPets} from "./controllers/pets.js"
-
 import { postDoctors, getDoctors ,getDoctorsbyid,updateDoctor,deletedoctors} from './controllers/petDocter.js'
 
 import {postSignupUser,postLogInUser} from "./controllers/user.js"
 import { PostBlog,deleteBlogId ,getallBlogs,getBlog} from "./controllers/blog.js";
-
 
 dotenv.config();
 const app = express()
@@ -49,6 +50,14 @@ app.get("/blogs/:id",getBlog)
 app.get("/blogs",getallBlogs)
 app.delete("/blog/:id",deleteBlogId)
 
+
+//PetFoods API's
+
+app.get("/PetFoods",getPetFoods)
+app.get("/PetFoods/:id",getPetFoodsId)
+app.put("/PetFoods/:id",putPetFoodsId)
+app.post("/PetFoods",postpetFoods)
+app.delete("/PetFoods/:id",deletePetFoods)
 
 const PORT = process.env.PORT || 5000
 
