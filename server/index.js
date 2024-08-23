@@ -7,13 +7,18 @@ import { postDoctors, getDoctors ,getDoctorsbyid,updateDoctor,deldoctors} from '
 //petFoods
 import{postpetFoods, getPetFoods,getPetFoodsId,putPetFoodsId, deletePetFoods} from './controllers/petFoods.js'
 
-import {postPet,deletePet,putPets} from "./controllers/pets.js"
+import {postPet,deletePet,putPets,getPets} from "./controllers/pets.js"
+import { postDoctors, getDoctors ,getDoctorsbyid,updateDoctor,deletedoctors} from './controllers/petDocter.js'
 
+import {postSignupUser,postLogInUser} from "./controllers/user.js"
+import { PostBlog,deleteBlogId ,getallBlogs,getBlog} from "./controllers/blog.js";
 
 dotenv.config();
 const app = express()
 app.use(express.json())
 app.use(cors())
+
+
 const dbConnection = async () => {
     const conn = await mongoose.connect(process.env.MONGO_URL);
     if (conn) {
@@ -26,7 +31,8 @@ app.get("/health" , getHealth)
 //API'S for pets
 
 app.post("/pet",postPet)
-app.put("/:petName/:id",putPets)
+app.put("/pet/:id",putPets)
+app.get("/pets",getPets)
 app.delete("/pet/:id",deletePet)
 
 app.post("/signup",postSignupUser)
@@ -38,6 +44,11 @@ app.post("/v1/doctors",postDoctors)
 app.post("/v1/doctors", postDoctors)
 app.put("/v1/doctors/:id",updateDoctor)
 app.delete("/v1/doctors",deletedoctors)
+//api blogs
+app.post("/blog",PostBlog)
+app.get("/blogs/:id",getBlog)
+app.get("/blogs",getallBlogs)
+app.delete("/blog/:id",deleteBlogId)
 
 
 //PetFoods API's
