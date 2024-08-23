@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../animal_cards/animal_cards.css'
 function Animal_cards({ Img, name, }) {
     return (
