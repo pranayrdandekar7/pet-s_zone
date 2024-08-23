@@ -49,9 +49,9 @@ function Footer() {
                     </div>
                     <div >
                         <p className='heading'>Social Links</p>
-                        <a className="CardBody "><img src={instagramImg} className='contact-logo' /> <span>Instagram</span></a>
-                        <a className="CardBody "><img src={facebookImg} className='contact-logo' /><span>Facebook</span></a>
-                        <a className="CardBody"><img src={linkdinImg} className=' contact-logo ' /><span>Linkdin</span></a>
+                        <a href='https://www.instagram.com/accounts/login/?hl=en' target='_blank' className="CardBody "><img src={instagramImg} className='contact-logo' /> <span>Instagram</span></a>
+                        <a href='https://www.facebook.com/login/' className="CardBody "><img src={facebookImg} className='contact-logo' /><span>Facebook</span></a>
+                        <a href='https://www.linkedin.com/login' className="CardBody"><img src={linkdinImg} className=' contact-logo ' /><span>Linkdin</span></a>
 
                     </div>
 
