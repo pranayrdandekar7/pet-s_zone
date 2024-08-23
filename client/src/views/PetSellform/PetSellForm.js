@@ -32,8 +32,9 @@ function PetSellForm() {
   return (
    <>
    <h1>Animal Selling Form</h1>
-   <form>
+   <form className="border border-primary d-flex flex-column w-50 mx-auto my-5 p-3 rounded">
     <input type="text"
+    className="w-100 border border-primary-subtle mx-auto my-2 p-2 rounded ps-4 input-outline"
      placeholder="Enter Animal Name"
      value={petName} 
       onChange={(e) => {
@@ -42,6 +43,7 @@ function PetSellForm() {
 
     <input type="text"
      placeholder="Enter Animal Age" 
+     className="w-100 border border-primary-subtle mx-auto my-2 p-2 rounded ps-4 input-outline"
      value={age}
      onChange={(e)=>{
       setAge(e.target.value)
@@ -50,6 +52,7 @@ function PetSellForm() {
 
     <input type="text" 
     placeholder="Enter Animal Gender"
+    className="w-100 border border-primary-subtle mx-auto my-2 p-2 rounded ps-4 input-outline"
      value={gender}
      onChange={(e) => {
       setGender(e.target.value);
@@ -57,6 +60,7 @@ function PetSellForm() {
 
     <input type="text"
      placeholder="Enter Animal Breed"
+     className="w-100 border border-primary-subtle mx-auto my-2 p-2 rounded ps-4 input-outline"
      value={breed} 
      onChange={(e) => {
       setBreed(e.target.value);
@@ -65,22 +69,22 @@ function PetSellForm() {
 
     <input type="text" 
     placeholder="Enter Animal Description"
+    className="w-100 border border-primary-subtle mx-auto my-2 p-2 rounded ps-4 input-outline"
      value={description}
      onChange={(e) => {
       setDescription(e.target.value);
 
     }}/>
-
+   
     <input type="text" 
     placeholder="Enter Animal price"
-    value={price} 
+    className="w-100 border border-primary-subtle mx-auto my-2 p-2 rounded ps-4 input-outline"
+    value= {price} 
     onChange={(e) => {
       setPrice(e.target.value);
 
     }}/>
 
-<button type="button" className="bg-black"  onClick={petSell}></button>
-    
    </form>
    
    </>
