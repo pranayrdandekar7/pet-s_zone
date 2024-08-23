@@ -3,7 +3,7 @@ import cors from "cors"
 import mongoose from "mongoose";
 import dotenv from "dotenv"
 import getHealth from "./controllers/helth.js";
-import { postDoctors, getDoctors ,getDoctorsbyid,updateDoctor,deldoctors} from './controllers/petDocter.js';
+
 //petFoods
 import{postpetFoods, getPetFoods,getPetFoodsId,putPetFoodsId, deletePetFoods} from './controllers/petFoods.js'
 

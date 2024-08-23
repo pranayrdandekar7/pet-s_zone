@@ -18,7 +18,7 @@
 }
 .heading{
     font-weight: bold;
-    font-size: 22px;
+    font-size: 18px;
 }
 .CardBody{
     display: flex;
@@ -26,9 +26,16 @@
     color: black;
     cursor: pointer;
     color: white;
+    margin-top: 10px;
+    font-size: 16px;
 }
 .contact-logo{
-    height: 26px;
+    height: 23px;
     margin-right: 10px;
+    
+}
+.copy-rights{
+    font-size: 14px;
+    padding: 20px 40px;
 }
 
