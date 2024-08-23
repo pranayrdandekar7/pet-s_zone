@@ -1,0 +1,46 @@
+.page-main-container{
+display: flex;
+    justify-content: space-evenly;
+}
+.image-container{
+    /* background-color: aqua; */
+    height: 70vh;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.animal-image{
+    height: 60vh;
+  
+}
+
+.animal-informations-container{
+    /* background-color: aqua; */
+width: 45%;
+}
+.animals-paragraph-text{
+    width: 50%;
+   margin: 10px auto;
+}
+.image-forwordbackword-Icon{
+    height: 45px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.image-forwordbackword-Icon:hover{
+    background-color: red;
+    box-shadow: 0 0 5px 1px grey;
+    transform: scale(01.05);
+    transition: 0.2s;
+   
+}
+.review-form{
+    width: 50%;
+}
+.reviw-input-text{
+    height: 200px;
+}
