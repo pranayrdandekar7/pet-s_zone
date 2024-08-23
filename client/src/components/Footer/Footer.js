@@ -1,32 +1,40 @@
 import React from 'react'
 import './Footer.css'
+import LogoImg from './../Navbar/petLogo.png'
+import Email from './../Footer/email.png'
+import Contact from './../Footer/contact-mail.png'
 
 function Footer() {
   return (
-    <div className="card text-center">
-            <div className="card-header footer-title">
-                Pets Zone
+    <div className="card text-center footer-body">
+            <div className="card-header footer-title ">
+                <img src='' className='logo-img'/>
+                <span>Pets Zone</span>
             </div>
             <div className="card-body ">
-                <h5 className="card-title"></h5>
+                <h5 className="card-title">"Paws, Claws, and Everything in Between"</h5>
                 <div className='footer-content '>
                     <div className='links'>
-                        <p className="card-text">Special Links</p>
-                        <a href="/" className="CardBody">Home</a><br />
-                        <a href="/Blogs" className="CardBody">Blogs</a><br />
-                        <a href="/Contact" className="CardBody">Contact</a><br />
+                        <p className="heading">Special Links</p>
+                        <a href="/" className="CardBody">Home</a>
+                        <a href="/Blogs" className="CardBody">Blogs</a>
+                        <a href="/Contact" className="CardBody">Contact</a>
                         <a href="/Login" className="CardBody">Login</a>
                     </div>
-                    <div className='contact'>
-                        <p>Contact</p>
-                        <a className="CardBody ">saritasadgir3@gmail.com</a><br />
-                        <p className="CardBody">Mobile<a>9665386035</a></p><br />
-
+                    <div >
+                        <p className='heading'>Contacts</p>
+                        <a className="CardBody "><img src={Email} className='contact-logo' /> <span>saritasadgir3@gmail.com</span></a>
+                        <a className="CardBody"><img src={Contact} className=' contact-logo contact-mobile'/> <span>9665386035</span></a>
+                    </div>
+                    <div >
+                        <p className='heading'>Contacts</p>
+                        <a className="CardBody "><img src={Email} className='contact-logo' /> <span>saritasadgir3@gmail.com</span></a>
+                        <a className="CardBody"><img src={Contact} className=' contact-logo contact-mobile'/> <span>9665386035</span></a>
                     </div>
                 </div>
             </div>
-            <div className="card-footer text-body-secondary">
-                2 days ago
+            <div className="card-footer ">
+                @2024 Copyright:petszone.com
             </div>
         </div>
   )

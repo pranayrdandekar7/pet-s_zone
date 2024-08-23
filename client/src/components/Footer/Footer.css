@@ -1,14 +1,34 @@
+.footer-body{
+    background-color: rgb(88, 88, 156);
+    color: white;
+}
+.display-flex{
+    display: flex;
+    flex-direction: row;
+}
 .footer-content{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin-top: 30px;
+    color: white;
 }
 .footer-title{
     font-size: 25px;
 }
+.heading{
+    font-weight: bold;
+    font-size: 22px;
+}
 .CardBody{
+    display: flex;
     text-decoration: none;
     color: black;
     cursor: pointer;
+    color: white;
 }
+.contact-logo{
+    height: 26px;
+    margin-right: 10px;
+}
+
