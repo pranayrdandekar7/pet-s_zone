@@ -23,7 +23,7 @@ function PetSellForm() {
       description,
       image,
       price,
-      user
+      
     })
     console.log(response)
     
@@ -79,7 +79,7 @@ function PetSellForm() {
 
     }}/>
 
-<button type="button"  onClick={petSell}></button>
+<button type="button" className="bg-black"  onClick={petSell}></button>
     
    </form>
    
