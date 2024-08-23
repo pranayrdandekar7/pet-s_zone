@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import {createBrowserRouter,RouterProvider} from "react-router-dom"
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Home from './views/Home/Home';
 
 
@@ -18,39 +18,41 @@ import SignUp from './views/SignUp/SignUp';
 import Login from './views/Login/Login';
 import PetSellForm from './views/PetSellform/PetSellForm';
 
-const router= createBrowserRouter ([
+const router = createBrowserRouter([
   {
-    path:"/",
-    element:<Home/>
+    path: "/",
+    element: <Home />
   },
   {
-    path:"/blog",
-    element:<Blog/>
+    path: "/blog",
+    element: <Blog />
   },
   {
 
-    path:"/petdetails",
-    element:<PetDatails/>
+    path: "/petdetails",
+    element: <PetDatails />
+  },
+  {
     path: '/signup',
-    element : <SignUp/>
+    element: <SignUp />
   },
   {
-    path:'/login',
-    element: <Login/>
+    path: '/login',
+    element: <Login />
 
   },
   {
-    path:"*",
-    element:`404 Not Found`
+    path: "*",
+    element: `404 Not Found`
   },
   {
-    path:"/sellform",
-    element:<PetSellForm/>
+    path: "/sellform",
+    element: <PetSellForm />
   },
- 
+
 
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<RouterProvider router={router}/>);
+root.render(<RouterProvider router={router} />);
 
