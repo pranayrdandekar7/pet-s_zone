@@ -1,7 +1,7 @@
 
 import PetFoods from './../models/PetFoods.js'
 
-const petFoods=async(req,res)=>{
+const postpetFoods=async(req,res)=>{
   const{
     name,
     price,
@@ -18,6 +18,7 @@ const petFoods=async(req,res)=>{
     description:description,
     category:category,
   })
+  try{
 
   const savedPetFoods=await newPetFoods.save();
   res.json({
@@ -26,6 +27,14 @@ const petFoods=async(req,res)=>{
     message:"PetFood added Sucessfully.."
   })
   
+  }
+  catch(error){
+    res.json({
+      success:false,
+      data:error,
+      message:"PetFood not added.."
+    })
+  }
   }
 
 
@@ -42,7 +51,7 @@ const petFoods=async(req,res)=>{
 
   //
   const getPetFoodsId=async(req,res)=>{
-    const {id}=req.paramas
+    const {id}=req.params
     const PetFoods =await PetFoods.findById(id)
 
     res.json({
@@ -62,7 +71,7 @@ const petFoods=async(req,res)=>{
       category,
     }=req.body
     
-    const{id}=req.paramas
+    const{id}=req.params
    await PetFoods.updateOne({_id:id},{
      $set:{
       name:name,
@@ -82,8 +91,8 @@ const petFoods=async(req,res)=>{
   }
 
   //
-  const deletePetFoods=asyn(req,res)=>{
-    const{id}=req.paramas
+  const deletePetFoods=async(req,res)=>{
+    const{id}=req.params
     await PetFoods.deleteOne({_id:id})
 
     res.json({
@@ -93,9 +102,12 @@ const petFoods=async(req,res)=>{
     })
   }
 
+  //
 
 
-export{  petFoods,
+
+
+export{ postpetFoods,
   getPetFoods,
   getPetFoodsId,
   putPetFoodsId,
