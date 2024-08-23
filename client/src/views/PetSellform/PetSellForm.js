@@ -85,6 +85,10 @@ function PetSellForm() {
 
     }}/>
 
+<button type="button"
+ className="bg-info text-dark px-auto py-2 rounded-2 text-bold " 
+  onClick={petSell}>Add Animal</button>
+    
    </form>
    
    </>
