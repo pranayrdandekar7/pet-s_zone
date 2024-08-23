@@ -1,0 +1,18 @@
+.h1{
+    color: #0D0D0D;
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card{
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+}
