@@ -1,0 +1,24 @@
+.nav-wid{
+    height: 90px;   
+    background-color: rgb(88, 88, 156);
+    color: white;
+    margin-bottom: 20px ;
+}.navbar-content{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.navbar-brand{
+    margin-left: 20px;
+    font-size: 30px;
+    color: white;
+}
+.nav-pages{
+    display: flex;
+    margin-right : -1px;
+}
+.nav-link{
+    margin-left: 35px;
+    margin-right: 10px;
+    font-size: 20px;
+}

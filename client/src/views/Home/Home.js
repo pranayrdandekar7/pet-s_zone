@@ -6,8 +6,8 @@ import bull from '../../components/animal_show_cards/bull.jpeg'
 import { Link } from 'react-router-dom'
 import dog from '../../components/animal_show_cards/dog.jpeg'
 import cat from '../../components/animal_show_cards/cat.jpg'
-import Footer from '../Footer/Footer'
-import Navbar from '../Navbar/Navbar'
+import Footer from '../../components/Footer/Footer.js'
+import Navbar from '../../components/Navbar/Navbar.js'
 
 
 function Home() {
