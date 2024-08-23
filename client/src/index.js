@@ -29,8 +29,8 @@ const router = createBrowserRouter([
   },
   {
 
-    path: "/petdetails",
-    element: <PetDatails />
+    path:"/petdetails",
+    element:<PetDatails/>
   },
   {
     path: '/signup',

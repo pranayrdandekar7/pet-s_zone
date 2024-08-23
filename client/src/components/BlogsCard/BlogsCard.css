@@ -1,0 +1,32 @@
+
+.blog-card{
+    height: 350px;
+    width: 490px;
+    padding: 9px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 6px  3px rgba(0, 0,0, 0.2);
+}
+.blog-title{
+    font-size: 20px;
+}
+.blog-desc{
+    font-size: 18px;
+   
+}
+.video-url{
+    font-size: 17px;
+    cursor: pointer;
+}
+.blog-date{
+    font-size: 16px;
+    font-style: italic;
+   
+}
+.blog-category{
+    font-size: 19px;
+    
+}
+
+   
+

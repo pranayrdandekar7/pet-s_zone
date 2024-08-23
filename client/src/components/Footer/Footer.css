@@ -1,0 +1,57 @@
+.footer-body{
+    background-color: rgb(88, 88, 156);
+    color: white;
+}
+.display-flex{
+    display: flex;
+    flex-direction: row;
+}
+.footer-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 30px;
+    color: white;
+}
+.footer-title{
+    font-size: 25px;
+}
+.heading{
+    font-weight: bold;
+    font-size: 18px;
+}
+.logoInfo{
+    display: flex;
+    flex-direction: row;
+    padding-left: 100px;
+}
+
+.website-info{
+    width: 200px;
+}
+.info{
+    width: 300px;
+    margin-top: 18px;
+}
+.CardBody{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    color: white;
+    margin-top: 10px;
+    font-size: 16px;
+}
+.content-center{
+    justify-content: center;
+}
+.contact-logo{
+    height: 23px;
+    margin-right: 10px;
+    
+}
+.copy-rights{
+    font-size: 14px;
+    padding: 20px 40px;
+}
+
