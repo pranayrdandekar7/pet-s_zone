@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+
 import Show_Cards from '../../components/animal_show_cards/animal_show_cards'
 import Animal_cards from '../../components/animal_cards/animal_cards'
 import cow from '../../components/animal_show_cards/cow.jpeg'
